@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
-    Camera camera;
+    //Camera camera;
     public GameObject @object;
     public float radius = 1.5f;
     private Transform player;
