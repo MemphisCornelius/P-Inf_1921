@@ -4,11 +4,11 @@ public class Interact : MonoBehaviour
 {
     //Camera camera;
 
-    public GameObject @object;
+    public GameObject interactebal;
     public float radius = 1.5f;
     private Transform player;
-    private float distance_x;
-    private float distance_y;
+    private float distancex;
+    private float distancey;
 
     private void Start()
     {
@@ -24,20 +24,18 @@ public class Interact : MonoBehaviour
 
     void Update()
     {
-        Vector3 difference_player = player.transform.position - transform.position;
-        Vector3 difference_object = @object.transform.position - transform.position;
-        distance_x = difference_player.x - difference_object.x;
-        distance_y = difference_player.y - difference_object.y;
+        Vector3 differenceplayer = player.transform.position - transform.position;
+        Vector3 differenceobject = interactebal.transform.position - transform.position;
+        distancex = differenceplayer.x - differenceobject.x;
+        distancey = differenceplayer.y - differenceobject.y;
         //Die Distanz auf der x- und y-Achse der beiden Objekte wird verglichen
 
         if (Input.GetKeyDown("e"))
 
-        if (Input.GetKey("e"))
-
         {
-            if (distance_x < radius)
+            if (distancex < radius)
             {
-                if (distance_y < radius)
+                if (distancey < radius)
                 {
                     Debug.Log("Es wurde interagiert");
                 }
