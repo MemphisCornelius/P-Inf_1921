@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+﻿using UnityEngine;
+
+public class Interact : MonoBehaviour
+{
+=======
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +11,7 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     //Camera camera;
+>>>>>>> cf0160d7b1fab4d262c79f1be5565eede7f24aac
     public GameObject @object;
     public float radius = 1.5f;
     private Transform player;
@@ -31,7 +38,11 @@ public class Interact : MonoBehaviour
         distance_y = difference_player.y - difference_object.y;
         //Die Distanz auf der x- und y-Achse der beiden Objekte wird verglichen
 
+<<<<<<< HEAD
+        if (Input.GetKeyDown("e"))
+=======
         if (Input.GetKey("e"))
+>>>>>>> cf0160d7b1fab4d262c79f1be5565eede7f24aac
         {
             if (distance_x < radius)
             {
@@ -45,5 +56,9 @@ public class Interact : MonoBehaviour
 
         }
     }
+<<<<<<< HEAD
+}
+=======
 }
 
+>>>>>>> cf0160d7b1fab4d262c79f1be5565eede7f24aac

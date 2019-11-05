@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class MainMenuFunctions : MonoBehaviour
 {
-
     Canvas main, optionen, spielstaende, spielAnpassungen;
-
     public void Awake()
     {
         main = GameObject.Find("Hauptmenue").GetComponent<Canvas>();
@@ -14,7 +12,6 @@ public class MainMenuFunctions : MonoBehaviour
         spielstaende = GameObject.Find("Spielstaende").GetComponent<Canvas>();
         spielAnpassungen = GameObject.Find("Spielanpassungen").GetComponent<Canvas>();
     }
-
     public void Start()
     {
         main.enabled = true;
@@ -22,7 +19,6 @@ public class MainMenuFunctions : MonoBehaviour
         spielstaende.enabled = false;
         spielAnpassungen.enabled = false;
     }
-
     public void SpielstandLaden(int spielstand)
     {
         Debug.Log(spielstand);
