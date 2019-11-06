@@ -11,6 +11,7 @@ public class Wall : MonoBehaviour
         Vector3 difference = player.transform.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 90);
+
     }
     void Update()
     {
