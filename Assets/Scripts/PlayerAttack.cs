@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
                 if (Mathf.Abs(radiantenemy - radiantmouse) < 90 || (Mathf.Abs(radiantenemy - radiantmouse) > 270 && Mathf.Abs(radiantenemy - radiantmouse) < 360))
                 {
                     enemy.GetComponent<Enemy>().hp = enemy.GetComponent<Enemy>().hp - 5 - ( 10 - dist * 3);
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2((-(transform.position.x * push - enemy.transform.position.x * push)), (-(transform.position.y * push - enemy.transform.position.y * push))));
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2((-1 / (transform.position.x * push - enemy.transform.position.x * push)), (1 / -(transform.position.y * push - enemy.transform.position.y * push))));
                 }
             }
         }
