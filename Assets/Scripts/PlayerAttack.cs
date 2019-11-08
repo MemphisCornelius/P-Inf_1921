@@ -24,8 +24,8 @@ public class PlayerAttack : MonoBehaviour
                 {
                     enemy.GetComponent<Enemy>().hp = enemy.GetComponent<Enemy>().hp - 5 - ( 10 - dist * 3);
 
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2((-1 / (transform.position.x * push - enemy.transform.position.x * push)), (1 / -(transform.position.y * push - enemy.transform.position.y * push))));
-                    /*Debug.Log("dis" + + (transform.position.x - enemy.transform.position.x) + ", " + (transform.position.y - enemy.transform.position.y));
+                    /*enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2((-1 / (transform.position.x * push - enemy.transform.position.x * push)), (1 / -(transform.position.y * push - enemy.transform.position.y * push))));
+                    Debug.Log("dis" + + (transform.position.x - enemy.transform.position.x) + ", " + (transform.position.y - enemy.transform.position.y));
                     Debug.Log((-(push / (transform.position.x - enemy.transform.position.x))) + ", " + (-(push / (transform.position.y - enemy.transform.position.y))));
                     enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(
                         (-(push / (transform.position.x - enemy.transform.position.x))),

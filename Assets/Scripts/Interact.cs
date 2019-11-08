@@ -8,8 +8,6 @@ public class Interact : MonoBehaviour
     public GameObject interactable;
     public float radius = 1.5f;
     private Transform player;
-    private float distancex;
-    private float distancey;
     public bool Information;
     public GameObject information_panel;
     public GameObject information_text;
@@ -28,38 +26,28 @@ public class Interact : MonoBehaviour
 
     void Update()
     {
-        Vector3 differenceplayer = player.transform.position - transform.position;
-        Vector3 differenceobject = interactable.transform.position - transform.position;
-        distancex = differenceplayer.x - differenceobject.x;
-        distancey = differenceplayer.y - differenceobject.y;
+        float dist = Vector3.Distance(transform.position, player.transform.position);
+
         //Die Distanz auf der x- und y-Achse der beiden Objekte wird verglichen
 
-        if (distancex > radius)
+        if (dist > radius)
         {
-            if (distancey > radius)
-            {
                 information_panel.SetActive(false);
-                information_text.SetActive(false);
-            }
+                information_text.SetActive(false);           
         }
-
         if (Input.GetKeyDown("e"))
 
         {
-            if (distancex < radius)
+            if (dist < radius)
             {
-                if (distancey < radius)
-                {
                     Debug.Log("Es wurde interagiert");
 
                     if (Information == true)
                     {
                         information_text.SetActive(true);
                         information_panel.SetActive(true);
-                    }
-                }
-            }
-            
+                    }              
+            }           
             //Ist die Distanz zwischen den beiden Objekten kleiner als ein festgelegter Radius, so wird ein Debug ausgeführt
         }
         
