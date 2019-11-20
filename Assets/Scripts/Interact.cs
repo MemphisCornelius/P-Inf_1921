@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Interact : MonoBehaviour
 {
-    //Camera camera;
 
     public GameObject interactable;
     public float radius = 1.5f;
@@ -22,33 +21,27 @@ public class Interact : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
-    //Radius wird im Editor visualisiert
 
     void Update()
     {
         float dist = Vector3.Distance(transform.position, player.transform.position);
 
-        //Die Distanz auf der x- und y-Achse der beiden Objekte wird verglichen
-
-        if (dist > radius)
+        if (Input.GetKeyUp("e"))
         {
                 information_panel.SetActive(false);
                 information_text.SetActive(false);           
         }
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") && dist < radius)
 
         {
-            if (dist < radius)
-            {
-                    Debug.Log("Es wurde interagiert");
+            Debug.Log("Es wurde interagiert");
 
-                    if (Information == true)
-                    {
-                        information_text.SetActive(true);
-                        information_panel.SetActive(true);
-                    }              
-            }           
-            //Ist die Distanz zwischen den beiden Objekten kleiner als ein festgelegter Radius, so wird ein Debug ausgeführt
+           if (Information == true)
+           {
+                 information_text.SetActive(true);
+                 information_panel.SetActive(true);
+           }              
+                      
         }
         
     }
