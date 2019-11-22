@@ -1,0 +1,77 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class numpad : MonoBehaviour
+{
+    public Text text, keymessage;
+    public int code = 6631;
+    public bool geil = false, codebool = false;
+    public float keymessagetimer;
+    public GameObject numbpad;
+    void Start()
+    {
+        keymessage.enabled = false;
+    }
+        
+
+    // Update is called once per frame
+    void Update()
+    { 
+        if(text.text == code.ToString()) {
+            geil = true;
+            codebool = true;
+            numbpad.SetActive(false);
+            keymessage.enabled = true;
+        }
+        else if (text.text.Length >= code.ToString().Length)
+        {
+            text.text = "";
+        }
+        if (keymessagetimer <= 0)
+        {
+            keymessage.enabled = false;
+        }
+        if (codebool == true)
+        {
+            keymessagetimer = keymessagetimer - Time.deltaTime;
+        }
+    }
+
+    public void TaskOnClick1() {
+        text.text = text.text + "1";
+    }
+    public void TaskOnClick2()
+    {
+        text.text = text.text + "2";
+    }
+    public void TaskOnClick3()
+    {
+        text.text = text.text + "3";
+    }
+    public void TaskOnClick4()
+    {
+        text.text = text.text + "4";
+    }
+    public void TaskOnClick5()
+    {
+        text.text = text.text + "5";
+    }
+    public void TaskOnClick6()
+    {
+        text.text = text.text + "6";
+    }
+    public void TaskOnClick7()
+    {
+        text.text = text.text + "7";
+    }
+    public void TaskOnClick8()
+    {
+        text.text = text.text + "8";
+    }
+    public void TaskOnClick9()
+    {
+        text.text = text.text + "9";
+    }
+}
