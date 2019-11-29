@@ -36,14 +36,12 @@ public class Interact : MonoBehaviour
         {
             Debug.Log("Es wurde interagiert");
 
-           if (Information == true)
+           if (Information)
            {
                  information_text.SetActive(true);
                  information_panel.SetActive(true);
            }              
                       
         }
-        
     }
-
 }

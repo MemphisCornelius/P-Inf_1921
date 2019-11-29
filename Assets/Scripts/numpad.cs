@@ -8,8 +8,8 @@ public class numpad : MonoBehaviour
     public Text text, keymessage;
     public int code = 6631;
     public bool geil = false, codebool = false;
-    public float keymessagetimer;
-    public GameObject numbpad;
+    public float keymessagetimer, maxdis;
+    public GameObject numbpad, activator, player;
     void Start()
     {
         keymessage.enabled = false;
@@ -18,8 +18,16 @@ public class numpad : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        if(text.text == code.ToString()) {
+    {
+        float dist = Vector3.Distance(activator.transform.position, player.transform.position);
+        if (Input.GetKeyDown("e") && dist < maxdis)
+        {
+            numbpad.SetActive(true);
+        } else if (dist > maxdis)
+        {
+            numbpad.SetActive(false);
+        }
+            if (text.text == code.ToString()) {
             geil = true;
             codebool = true;
             numbpad.SetActive(false);
@@ -33,7 +41,7 @@ public class numpad : MonoBehaviour
         {
             keymessage.enabled = false;
         }
-        if (codebool == true)
+        if (codebool)
         {
             keymessagetimer = keymessagetimer - Time.deltaTime;
         }
