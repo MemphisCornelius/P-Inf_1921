@@ -6,8 +6,7 @@ public class Test : MonoBehaviour {
     public float range;
     public GameObject Wall;
 
-    public void PlaceWall ()
-    {
+    public void PlaceWall() {
         Vector3 difference = player.transform.position - transform.position;
         float rotation = Mathf.Atan2(difference.y, difference.x);
         float x = Mathf.Cos(rotation);

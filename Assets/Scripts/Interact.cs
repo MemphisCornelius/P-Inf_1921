@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Interact").transform;
     }
 
     public void OnDrawGizmosSelected()
@@ -21,7 +21,19 @@ public class Interact : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            if (Information)
+            {
+                information_text.SetActive(true);
+                information_panel.SetActive(true);
+            }
 
+        }
+    }
     void Update()
     {
         float dist = Vector3.Distance(transform.position, player.transform.position);
@@ -30,11 +42,11 @@ public class Interact : MonoBehaviour
         {
                 information_panel.SetActive(false);
                 information_text.SetActive(false);           
-        }
+        }        
+
         if (Input.GetKeyDown("e") && dist < radius)
 
         {
-            Debug.Log("Es wurde interagiert");
 
            if (Information)
            {

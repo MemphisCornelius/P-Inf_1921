@@ -6,6 +6,7 @@ public class chairPickUpScript : MonoBehaviour {
     public GameObject player, zettel;
     private bool chairUp = false, zettelFallen = false;
     private float timer, timer1;
+    private Vector3 target;
     void Start() {
 
     }
@@ -17,8 +18,10 @@ public class chairPickUpScript : MonoBehaviour {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
             Vector3 difference = player.transform.position - transform.position;
-            float rotation = player.transform.eulerAngles.z * Mathf.Deg2Rad;
-            transform.position = player.transform.position + new Vector3(Mathf.Cos(rotation),Mathf.Sin(rotation), 0);;
+            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
+            Vector3 dif = target - transform.position;
+            //float rotation = Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg;
+            transform.position = new Vector2(player.transform.position.x, player.transform.position.y) + new Vector2(Mathf.Cos(0),Mathf.Sin(0));
             timer = 1f;
             chairUp = false;
         }
@@ -39,7 +42,7 @@ public class chairPickUpScript : MonoBehaviour {
 
         }
         else if (!zettelFallen){
-            zettel.transform.position = player.transform.position;
+            zettel.transform.position = new Vector2 (player.transform.position.x, player.transform.position.y);
         }
     }
 }
