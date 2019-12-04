@@ -10,6 +10,7 @@ public class Interact : MonoBehaviour
     public bool Information;
     public GameObject information_panel;
     public GameObject information_text;
+    bool shown = false;
 
     private void Start()
     {
@@ -31,29 +32,38 @@ public class Interact : MonoBehaviour
                 information_text.SetActive(true);
                 information_panel.SetActive(true);
             }
-
         }
     }
     void Update()
     {
         float dist = Vector3.Distance(transform.position, player.transform.position);
 
-        if (Input.GetKeyUp("e"))
-        {
-                information_panel.SetActive(false);
-                information_text.SetActive(false);           
-        }        
+
 
         if (Input.GetKeyDown("e") && dist < radius)
-
         {
-
-           if (Information)
-           {
+            if (shown)
+            {
+                shown = false;
+            }
+            else
+            {
+                shown = true;
+            }
+            if (Information && shown)
+            {
                  information_text.SetActive(true);
                  information_panel.SetActive(true);
-           }              
-                      
+            }
+            if (Information && !shown)
+            {
+                information_panel.SetActive(false);
+                information_text.SetActive(false);
+            }
+        }
+        if (dist > radius) {
+            information_panel.SetActive(false);
+            information_text.SetActive(false);
         }
     }
 }
