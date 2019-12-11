@@ -4,17 +4,11 @@ using UnityEngine.UI;
 public class Interact : MonoBehaviour
 {
 
-    public GameObject interactable;
     public float radius = 1.5f;
-    private Transform player;
+    public GameObject player;
     public bool Information, shown = false;
     public GameObject information_panel;
     public GameObject information_text;
-
-    private void Start()
-    {
-        player = GameObject.Find("Interact").transform;
-    }
 
     public void OnDrawGizmosSelected()
     {
@@ -37,16 +31,17 @@ public class Interact : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(transform.position, player.transform.position);
-
         if (Input.GetKeyDown("e") && dist < radius)
         {
             if (shown)
             {
                 shown = false;
+                player.GetComponent<PlayerMovement>().Movementenabled = true;
             }
             else
             {
                 shown = true;
+                player.GetComponent<PlayerMovement>().Movementenabled = false;
             }
             if (Information && shown)
             {
@@ -59,10 +54,6 @@ public class Interact : MonoBehaviour
                 information_text.SetActive(false);
             }
         }
-        if (dist > radius)
-        {
-            information_panel.SetActive(false);
-            information_text.SetActive(false);
-        }
+
     }
 }

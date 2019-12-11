@@ -312,9 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: {fileID: 645099124}
   radius: 1.5
+  player: {fileID: 711277336}
   Information: 1
+  shown: 0
   information_panel: {fileID: 645099124}
   information_text: {fileID: 443189411}
 --- !u!1001 &211285088
@@ -638,7 +639,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443189413
 MonoBehaviour:
@@ -3488,9 +3489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: {fileID: 0}
-  radius: 2
+  radius: 3
+  player: {fileID: 711277336}
   Information: 1
+  shown: 0
   information_panel: {fileID: 645099124}
   information_text: {fileID: 1878605902}
 --- !u!1 &2043710055
