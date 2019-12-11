@@ -6,8 +6,11 @@ public class PlayerMovement : MonoBehaviour {
     float xForce, yForce;
     public float maxSpeed;
     private Vector3 target;
+    public bool Movementenabled = true;
 
     void FixedUpdate() {
+       
+        if (Movementenabled==true) { 
         float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
         xForce = xInput * speed * Time.deltaTime;
@@ -29,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
 
         Vector3 difference = target - transform.position;
-       
-     
+            
+        }
     }
 }
