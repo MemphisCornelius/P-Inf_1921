@@ -11,7 +11,6 @@ public class chairPickUpScript : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
     void Update() {
         float dist = Vector3.Distance(transform.position, player.transform.position);
         if (Input.GetKeyDown("e") && chairUp){
