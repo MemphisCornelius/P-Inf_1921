@@ -9,7 +9,7 @@ public class numpad : MonoBehaviour
     public int code = 6631;
     public bool geil = false, codebool = false;
     public float keymessagetimer, maxdis;
-    public GameObject numbpad, activator, player;
+    public GameObject numbpad, activator, player, information_panel;
     void Start()
     {
         Schlüsselnachricht.enabled=(false);
@@ -34,6 +34,7 @@ public class numpad : MonoBehaviour
             codebool = true;
             numbpad.SetActive(false);
             Schlüsselnachricht.enabled=true;
+            information_panel.SetActive(true);
         }
         else if (text.text.Length >= code.ToString().Length)
         {
@@ -47,6 +48,7 @@ public class numpad : MonoBehaviour
         if (keymessagetimer < 0) {
 
             Schlüsselnachricht.enabled = false;
+            information_panel.SetActive(false);
 
         }
     }
