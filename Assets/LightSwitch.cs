@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-    public GameObject light, player;
+    public GameObject licht, player;
     public float radius;
     float dist;
     void Update()
     {
         float dist = Vector3.Distance(transform.position, player.transform.position);
-        if (Input.GetKeyDown("e") && dist < radius && !light.activeInHierarchy)
+        if (Input.GetKeyDown("e") && dist < radius && !licht.activeInHierarchy)
         {
-            light.SetActive(true);
+            licht.SetActive(true);
 
-        } else if (Input.GetKeyDown("e") && dist < radius && light.activeInHierarchy)
+        } else if (Input.GetKeyDown("e") && dist < radius && licht.activeInHierarchy)
         {
-            light.SetActive(false);
+            licht.SetActive(false);
         }
     }
 }
