@@ -8392,6 +8392,7 @@ GameObject:
   - component: {fileID: 1385241724}
   - component: {fileID: 1385241723}
   - component: {fileID: 1385241725}
+  - component: {fileID: 1385241726}
   m_Layer: 0
   m_Name: Pflanze
   m_TagString: Untagged
@@ -8481,6 +8482,22 @@ MonoBehaviour:
   first: 0
   information_panel: {fileID: 169802578}
   information_text: {fileID: 1910794799}
+--- !u!58 &1385241726
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385241722}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1449977200
 GameObject:
   m_ObjectHideFlags: 0
