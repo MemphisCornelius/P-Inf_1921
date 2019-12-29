@@ -25,7 +25,6 @@ public class Interact : MonoBehaviour
                 information_text.SetActive(true);
                 information_panel.SetActive(true);
             }
-
         }
     }
     void Update()
@@ -54,6 +53,5 @@ public class Interact : MonoBehaviour
                 information_text.SetActive(false);
             }
         }
-
     }
 }
