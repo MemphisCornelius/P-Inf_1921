@@ -32,6 +32,6 @@ public class FernseherRauschen : MonoBehaviour
         if (licht.activeInHierarchy && flackern)
         {
             fernseher.GetComponent<SpriteRenderer>().color = new Vector4(0, 0, 1, 1);
-        }
+        } 
     }
 }
