@@ -41,6 +41,7 @@ public class Interact : MonoBehaviour
             {
                 shown = true;
                 player.GetComponent<PlayerMovement>().Movementenabled = false;
+                //player.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
             if (Information && shown)
             {

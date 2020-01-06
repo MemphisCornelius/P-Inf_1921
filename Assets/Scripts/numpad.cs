@@ -1,92 +1,95 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class numpad : MonoBehaviour
-{
-    public Text text, Schlüsselnachricht;
+public class numpad : MonoBehaviour {
+    public TextMeshProUGUI text;
+    public Text Schlüsselnachricht;
     public int code = 6631;
     public bool geil = false, codebool = false;
     public float keymessagetimer, maxdis;
     public GameObject numbpad, activator, player, information_panel;
-    void Start()
-    {
-        Schlüsselnachricht.enabled=(false);
+
+    void Start() {
+        Schlüsselnachricht.enabled = (false);
     }
 
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         float dist = Vector3.Distance(activator.transform.position, player.transform.position);
-        if (Input.GetKeyDown("e") && dist < maxdis)
-        {
+        if (Input.GetKeyDown("e") && dist < maxdis) {
             numbpad.SetActive(true);
         }
-        else if (dist > maxdis)
-        {
+        else if (dist > maxdis) {
             numbpad.SetActive(false);
         }
-        if (text.text == code.ToString())
-        {
+
+        if (text.text == code.ToString()) {
             geil = true;
             codebool = true;
             numbpad.SetActive(false);
-            Schlüsselnachricht.enabled=true;
+            Schlüsselnachricht.enabled = true;
             information_panel.SetActive(true);
         }
-        else if (text.text.Length >= code.ToString().Length)
-        {
+        else if (text.text.Length >= code.ToString().Length) {
             text.text = "";
         }
-        if (keymessagetimer >= 0 && codebool)
-        { 
-                keymessagetimer = keymessagetimer - Time.deltaTime;
-            
-        }
-        if (keymessagetimer < 0) {
 
+        if (keymessagetimer >= 0 && codebool) {
+            keymessagetimer = keymessagetimer - Time.deltaTime;
+        }
+
+        if (keymessagetimer < 0) {
             Schlüsselnachricht.enabled = false;
             information_panel.SetActive(false);
-
         }
     }
-        public void TaskOnClick1()
-        {
-            text.text = text.text + "1";
-        }
-        public void TaskOnClick2()
-        {
-            text.text = text.text + "2";
-        }
-        public void TaskOnClick3()
-        {
-            text.text = text.text + "3";
-        }
-        public void TaskOnClick4()
-        {
-            text.text = text.text + "4";
-        }
-        public void TaskOnClick5()
-        {
-            text.text = text.text + "5";
-        }
-        public void TaskOnClick6()
-        {
-            text.text = text.text + "6";
-        }
-        public void TaskOnClick7()
-        {
-            text.text = text.text + "7";
-        }
-        public void TaskOnClick8()
-        {
-            text.text = text.text + "8";
-        }
-        public void TaskOnClick9()
-        {
-            text.text = text.text + "9";
-        }
-     
+
+    public void TaskOnClick1() {
+        text.text += "1";
+    }
+
+    public void TaskOnClick2() {
+        text.text += "2";
+    }
+
+    public void TaskOnClick3() {
+        text.text += "3";
+    }
+
+    public void TaskOnClick4() {
+        text.text += "4";
+    }
+
+    public void TaskOnClick5() {
+        text.text += "5";
+    }
+
+    public void TaskOnClick6() {
+        text.text += "6";
+    }
+
+    public void TaskOnClick7() {
+        text.text += "7";
+    }
+
+    public void TaskOnClick8() {
+        text.text += "8";
+    }
+
+    public void TaskOnClick9() {
+        text.text += "9";
+    }
+
+    public void TaskOnClick0() {
+        text.text += "0";
+    }
+
+    public void TaskOnClickDelete() {
+        if (text.text.Length > 0)
+            text.text = text.text.Substring(0, text.text.Length - 1);
+    }
 }
