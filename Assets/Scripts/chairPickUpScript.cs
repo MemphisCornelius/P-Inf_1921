@@ -20,7 +20,7 @@ public class chairPickUpScript : MonoBehaviour {
             //target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
             //Vector3 dif = target - transform.position;
             //float rotation = Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg;
-            transform.position = new Vector2(player.transform.position.x, player.transform.position.y) + new Vector2(Mathf.Cos(0),Mathf.Sin(0));
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z) + new Vector3(Mathf.Cos(0),Mathf.Sin(0), 0);
             timer = 1f;
             chairUp = false;
         }
