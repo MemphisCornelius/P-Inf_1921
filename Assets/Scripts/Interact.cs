@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class Interact : MonoBehaviour {
     public UnityEvent interact;
     
-    public float radius = 1.5f, dist;
+    public float radius = 1.5f;
+    float dist;
     public GameObject player;
     public void OnDrawGizmosSelected()
     {
@@ -16,7 +16,7 @@ public class Interact : MonoBehaviour {
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (Input.GetKeyDown("e")) {
-            Test();
+            interact.Invoke();
         }
     }
     void Update() {

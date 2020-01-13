@@ -1792,6 +1792,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240769591}
   m_CullTransparentMesh: 0
+--- !u!1 &241913606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241913608}
+  - component: {fileID: 241913607}
+  m_Layer: 0
+  m_Name: BigBoy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &241913607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241913606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32323b442fece5244b79d3031b59bab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &241913608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241913606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272603362
 GameObject:
   m_ObjectHideFlags: 0
@@ -8472,16 +8515,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1385241722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aff337b30c76b9a4abea5340158577b2, type: 3}
+  m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 241913607}
+        m_MethodName: InteractPflanzeToInteractThePflanze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   radius: 1.5
   player: {fileID: 472533254}
-  Information: 0
-  shown: 0
-  first: 0
-  information_panel: {fileID: 169802578}
-  information_text: {fileID: 1910794799}
 --- !u!58 &1385241726
 CircleCollider2D:
   m_ObjectHideFlags: 0
