@@ -567,12 +567,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interact:
+    m_PersistentCalls:
+      m_Calls: []
   radius: 1.5
   player: {fileID: 711277336}
-  Information: 1
-  shown: 0
-  information_panel: {fileID: 645099124}
-  information_text: {fileID: 443189411}
 --- !u!212 &191677945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2073,12 +2072,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631822259}
   m_CullTransparentMesh: 0
---- !u!1 &645099124 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884086720528013916, guid: 96444d369b4832a459133787233799ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 709266090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &645099125 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1884086720528013907, guid: 96444d369b4832a459133787233799ae,
@@ -3056,12 +3049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interact:
+    m_PersistentCalls:
+      m_Calls: []
   radius: 2
   player: {fileID: 711277336}
-  Information: 1
-  shown: 0
-  information_panel: {fileID: 645099124}
-  information_text: {fileID: 1878605902}
 --- !u!61 &786242337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3166,7 +3158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786242335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: -2.07, z: -2}
+  m_LocalPosition: {x: -2.4, y: -2, z: -2}
   m_LocalScale: {x: 0.43, y: 0.42, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5487,12 +5479,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929312fe55ef8d4e839c8679fe750b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interact:
+    m_PersistentCalls:
+      m_Calls: []
   radius: 3
   player: {fileID: 711277336}
-  Information: 1
-  shown: 0
-  information_panel: {fileID: 645099124}
-  information_text: {fileID: 1878605902}
 --- !u!1 &2043710055
 GameObject:
   m_ObjectHideFlags: 0
