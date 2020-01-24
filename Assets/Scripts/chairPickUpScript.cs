@@ -6,14 +6,16 @@ public class chairPickUpScript : MonoBehaviour {
     public GameObject player, zettel;
     private bool chairUp = false, zettelFallen = false;
     private float timer, timer1;
+    Animator animator;
     //private Vector3 target;
     void Start() {
-
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
         float dist = Vector3.Distance(transform.position, player.transform.position);
         if (Input.GetKeyDown("e") && chairUp){
+            player.GetComponent<Animator>().SetBool("Chair?", false);
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
             //Vector3 difference = player.transform.position - transform.position;
@@ -27,6 +29,7 @@ public class chairPickUpScript : MonoBehaviour {
         timer = timer - Time.deltaTime;
         timer1 = timer1 - Time.deltaTime;
         if (Input.GetKeyDown("e") && dist < maxdis && !chairUp && timer <= 0) {
+            player.GetComponent<Animator>().SetBool("Chair?",true);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             timer1 = 1f;
