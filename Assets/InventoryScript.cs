@@ -16,7 +16,7 @@ public class InventoryScript : MonoBehaviour
     }
     public void addToArray()
     {
-        items[zaehler] = new string[5];
+        items[zaehler] = ;
         zaehler++;
     }
     
