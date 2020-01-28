@@ -16,12 +16,7 @@ public class InventoryScript : MonoBehaviour
     }
     public void addToArray()
     {
-       // items[zaehler] = ;
+        items[zaehler] = ;
         zaehler++;
-    }
-    
-    public void removeFromArray()
-    {
-
-    }
+    } 
 }
