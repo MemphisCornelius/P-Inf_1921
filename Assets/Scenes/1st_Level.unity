@@ -569,7 +569,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 672152526}
+        m_MethodName: interact_zettel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   radius: 1.5
   player: {fileID: 711277336}
 --- !u!212 &191677945
@@ -2424,9 +2435,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32323b442fece5244b79d3031b59bab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animation_Stranger: {fileID: 786242335}
   information_panel: {fileID: 1915051041}
   shown: 1
   information_text: {fileID: 1878605902}
+  information_textzettel: {fileID: 443189411}
   player: {fileID: 711277343}
   first: 1
 --- !u!224 &677344399 stripped
