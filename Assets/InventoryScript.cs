@@ -10,9 +10,9 @@ public class InventoryScript : MonoBehaviour
 
     int zaehler = 0;
 
-    public void createSlot(GameObject prefab, string[] slaps)
+    public void createSlot(GameObject prefab, string[] item)
     {
-        items[zaehler] = gaylu;
+        items[zaehler] = item;
         zaehler++;
         
         Instantiate(prefab, Vector3.zero, Quaternion.identity, parent.transform);
