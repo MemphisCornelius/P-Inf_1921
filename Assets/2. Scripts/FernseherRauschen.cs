@@ -17,7 +17,8 @@ public class FernseherRauschen : MonoBehaviour
         float dist = Vector3.Distance(transform.position, player.transform.position);
         if (Input.GetKeyDown("e") && dist < radius && player.GetComponent<PlayerMovement>().Movementenabled)
         {
-            fernseher.GetComponent<SpriteRenderer>().color = new Vector4(0, 1, 0, 1);
+            //fernseher.GetComponent<SpriteRenderer>().color = new Vector4(0, 1, 0, 1);
+
             flackern = true;
             player.GetComponent<PlayerMovement>().Movementenabled = false;
             if(zettel)
