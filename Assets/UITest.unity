@@ -523,7 +523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   gO: {fileID: 4911849982615558011, guid: e799189487aaadf4a82a299ea05de75e, type: 3}
+  gO1: {fileID: 4911849982615558011, guid: b3dd4419d5c84774289389c4ece0e431, type: 3}
   canvas: {fileID: 1782965138}
+  cachette: {fileID: 0}
 --- !u!1 &1802802175
 GameObject:
   m_ObjectHideFlags: 0
