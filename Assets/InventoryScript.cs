@@ -4,17 +4,53 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-    public string[][] items = new string[10][];
-    //itemarray = name, descripton
-    public GameObject prefab, parent;
-
-    int zaehler = 0;
-
-    public void createSlot(GameObject prefab, string[] item)
+    List<Items> inventory = new List<Items>();
+    List<GameObject> spawned = new List<GameObject>();
+    public int counter;
+    Vector3 offset, spawn;
+    public GameObject gO, gO1, canvas, cachette;  
+    void Start()
     {
-        items[zaehler] = item;
-        zaehler++;
-        
-        Instantiate(prefab, Vector3.zero, Quaternion.identity, parent.transform);
+        spawn = new Vector3(420, 20);       
+        AddItem("Harvey", "50", 2, gO);
+        AddItem("Harveyy", "50", 2, gO1);       
+    }
+    public void AddItem(string newName, string newDescription, int newPower, GameObject newPicture)
+    {
+        for (int i = 0; i < spawned.Count; i++)
+        {
+            Destroy(spawned[i]);
+        }
+        spawned.Clear();
+        inventory.Add(new Items(newName, newDescription, newPower, newPicture));
+        for (int i = 0; i < inventory.Count ; i++)
+        {
+            offset = new Vector3(-40 * i+1, 0);
+            cachette = inventory[i].picture;
+            GameObject g = Instantiate(cachette, spawn + offset, Quaternion.identity, canvas.transform);
+            spawned.Add(g);
+        }
+    }
+    public void RemoveItem(string TÖTEETWASDEINERWAHLZUMTÖTENDEINERWAHL)
+    {
+        for (int i = 0; i < spawned.Count; i++)
+        {
+            Destroy(spawned[i]);
+        }
+        spawned.Clear();
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i]._name == TÖTEETWASDEINERWAHLZUMTÖTENDEINERWAHL)
+            {
+                inventory.Remove(inventory[i]);
+                break;
+            }
+        }
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            offset = new Vector3(-40 * i + 1, 0);
+            GameObject g = Instantiate(cachette, spawn + offset, Quaternion.identity, canvas.transform);
+            spawned.Add(g);
+        }
     }
 }

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1782965144}
+      - m_Target: {fileID: 0}
         m_MethodName: createSlot
         m_Mode: 1
         m_Arguments:
@@ -421,7 +421,6 @@ GameObject:
   - component: {fileID: 1782965142}
   - component: {fileID: 1782965141}
   - component: {fileID: 1782965140}
-  - component: {fileID: 1782965139}
   - component: {fileID: 1782965144}
   m_Layer: 5
   m_Name: Canvas
@@ -430,18 +429,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1782965139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782965138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f181a80d88e0de2439772b95ba837361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1782965140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,8 +521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddafac317340ea64aa5608af80061486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4911849982615558011, guid: e799189487aaadf4a82a299ea05de75e, type: 3}
-  parent: {fileID: 1782965138}
+  counter: 0
+  gO: {fileID: 4911849982615558011, guid: e799189487aaadf4a82a299ea05de75e, type: 3}
+  canvas: {fileID: 1782965138}
 --- !u!1 &1802802175
 GameObject:
   m_ObjectHideFlags: 0
