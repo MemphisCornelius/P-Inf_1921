@@ -10,7 +10,7 @@ public class InventoryScript : MonoBehaviour
     Vector3 offset, spawn;
     public GameObject gO, gO1, canvas, cachette;  
     void Start()
-    {
+    {//testzweck
         spawn = new Vector3(420, 20);       
         AddItem("Harvey", "50", 2, gO);
         AddItem("Harveyy", "50", 2, gO1);       
