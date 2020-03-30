@@ -27,6 +27,22 @@ public class numpad : MonoBehaviour {
             numbpad.SetActive(false);
         }
 
+        if (numbpad.active)
+        {
+            if(Input.GetKeyDown(KeyCode.Alpha0)) {TaskOnClick(0);}
+            if(Input.GetKeyDown(KeyCode.Alpha1)) {TaskOnClick(1);}
+            if(Input.GetKeyDown(KeyCode.Alpha2)) {TaskOnClick(2);}
+            if(Input.GetKeyDown(KeyCode.Alpha3)) {TaskOnClick(3);}
+            if(Input.GetKeyDown(KeyCode.Alpha4)) {TaskOnClick(4);}
+            if(Input.GetKeyDown(KeyCode.Alpha5)) {TaskOnClick(5);}
+            if(Input.GetKeyDown(KeyCode.Alpha6)) {TaskOnClick(6);}
+            if(Input.GetKeyDown(KeyCode.Alpha7)) {TaskOnClick(7);}
+            if(Input.GetKeyDown(KeyCode.Alpha8)) {TaskOnClick(8);}
+            if(Input.GetKeyDown(KeyCode.Alpha9)) {TaskOnClick(9);}
+            if (Input.GetKeyDown(KeyCode.Delete)) {TaskOnClickDelete();}
+
+        }
+
         if (text.text == code.ToString()) {
             geil = true;
             codebool = true;
@@ -48,44 +64,8 @@ public class numpad : MonoBehaviour {
         }
     }
 
-    public void TaskOnClick1() {
-        text.text += "1";
-    }
-
-    public void TaskOnClick2() {
-        text.text += "2";
-    }
-
-    public void TaskOnClick3() {
-        text.text += "3";
-    }
-
-    public void TaskOnClick4() {
-        text.text += "4";
-    }
-
-    public void TaskOnClick5() {
-        text.text += "5";
-    }
-
-    public void TaskOnClick6() {
-        text.text += "6";
-    }
-
-    public void TaskOnClick7() {
-        text.text += "7";
-    }
-
-    public void TaskOnClick8() {
-        text.text += "8";
-    }
-
-    public void TaskOnClick9() {
-        text.text += "9";
-    }
-
-    public void TaskOnClick0() {
-        text.text += "0";
+    public void TaskOnClick(int i) {
+        text.text += i;
     }
 
     public void TaskOnClickDelete() {
