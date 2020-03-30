@@ -25,15 +25,15 @@ public class Background_Bug : MonoBehaviour
 
         float yPlayer =player.transform.position.y;
         yPlayer = yPlayer+100;
-        float yChair = player.transform.position.y;
+        float yChair = this.transform.position.y;
         yChair = yChair+100; 
         
-        if (yPlayer> yChair)
+        if (yPlayer>yChair)
         {
-            this.transform.position = temp;
+            this.transform.position =temp;
 
 
-        } else if(yChair> yPlayer){
+        } else if(yPlayer<yChair){
 
             this.transform.position = temp2;
         }
