@@ -4,15 +4,12 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class doorOpenScriptToOpenTheDoor : MonoBehaviour
+public class DoorOpen : MonoBehaviour
 {
     public bool key;
     public Canvas can;
     public GameObject door, doorOpener;
     public float maxdis;
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()

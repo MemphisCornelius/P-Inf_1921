@@ -8,10 +8,8 @@ public class InventoryScript : MonoBehaviour
     List<GameObject> spawned = new List<GameObject>();
     public int counter;
     Vector3 offset, spawn;
-    public GameObject canvas, cachette;  
-    void Start()
-    {       
-    }
+    public GameObject canvas, cachette;
+    
     public void AddItem(string newName, string newDescription, int newPower, GameObject newPicture)
     {
         for (int i = 0; i < spawned.Count; i++)

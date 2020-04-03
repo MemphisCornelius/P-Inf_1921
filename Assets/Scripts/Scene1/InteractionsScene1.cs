@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class BigInteract : MonoBehaviour
+public class InteractionsScene1 : MonoBehaviour
 {
     public GameObject Animation_Stranger;
     public GameObject information_panel;

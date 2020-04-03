@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 
-public class chairPickUpScript : MonoBehaviour {
+public class chairPickUp : MonoBehaviour {
 
     public float maxdis;
     public GameObject player, zettel;
     private bool chairUp = false, zettelFallen = false;
     private float timer, timer1;
     Animator animator;
-    //private Vector3 target;
     void Start() {
         animator = GetComponent<Animator>();
     }
@@ -18,10 +17,6 @@ public class chairPickUpScript : MonoBehaviour {
             player.GetComponent<Animator>().SetBool("Chair?", false);
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            //Vector3 difference = player.transform.position - transform.position;
-            //target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1000));
-            //Vector3 dif = target - transform.position;
-            //float rotation = Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg;
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z) + new Vector3(Mathf.Cos(0),Mathf.Sin(0), 0);
             timer = 1f;
             chairUp = false;
