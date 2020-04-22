@@ -11,9 +11,13 @@ public class numpad : MonoBehaviour {
     public bool geil = false, codebool = false;
     public float keymessagetimer, maxdis;
     public GameObject numbpad, activator, player, information_panel;
-
+    public Inventory inv;
+    public GameObject keyP;
+    private Item key;
+    
     void Start() {
         Schlüsselnachricht.enabled = (false);
+        key = new Item("Schlüssel", "Kann eine Tür öffnen", 1, keyP); 
     }
 
 
@@ -49,6 +53,10 @@ public class numpad : MonoBehaviour {
             numbpad.SetActive(false);
             Schlüsselnachricht.enabled = true;
             information_panel.SetActive(true);
+            if(!inv.ContainsItem(key)) {
+                inv.AddItem(key);
+            }
+            
         }
         else if (text.text.Length >= code.ToString().Length) {
             text.text = "";
