@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour {
         target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
 
         Vector3 difference = target - transform.position;
+
+
             
         }
     }
