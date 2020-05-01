@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
         inventory.Add(item);
         for (int i = 0; i < inventory.Count ; i++)
         {
-            offset = new Vector3(-40 * i+1, 0);
+            offset = new Vector3(-offset.x * i+1, offset.y);
             cachette = inventory[i].picture;
             GameObject g = Instantiate(cachette, spawn + offset, Quaternion.identity, transform);
             spawned.Add(g);
@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour
         spawned.Clear();
         for (int i = 0; i < inventory.Count; i++)
         {
-            if (inventory[i]._name == removeItemName)
+            if (inventory[i]._name.Equals(removeItemName))
             {
                 inventory.Remove(inventory[i]);
                 break;
@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
         }
         for (int i = 0; i < inventory.Count; i++)
         {
-            offset = new Vector3(-40 * i + 1, 0);
+            offset = new Vector3(-offset.x * i+1, offset.y);
             GameObject g = Instantiate(cachette, spawn + offset, Quaternion.identity, transform);
             spawned.Add(g);
         }

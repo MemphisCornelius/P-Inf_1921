@@ -20,7 +20,7 @@ public class DoorOpen : MonoBehaviour
         if (dis <= maxdis && Input.GetKeyDown("e") && key)
         {
             doorOpener.transform.rotation = Quaternion.Euler(0,0,-90f);
-            inv.RemoveItem("Schlüssel");
+            inv.RemoveItem("Schluessel");
             SceneManager.LoadScene(1);
         }
     }

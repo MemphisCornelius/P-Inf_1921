@@ -17,7 +17,7 @@ public class numpad : MonoBehaviour {
     
     void Start() {
         Schlüsselnachricht.enabled = (false);
-        key = new Item("Schlüssel", "Kann eine Tür öffnen", 1, keyP); 
+        key = new Item("Schluessel", "Kann eine Tür öffnen", 1, keyP); 
     }
 
 
@@ -43,7 +43,7 @@ public class numpad : MonoBehaviour {
             if(Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Keypad7)) {TaskOnClick(7);}
             if(Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.Keypad8)) {TaskOnClick(8);}
             if(Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown(KeyCode.Keypad9)) {TaskOnClick(9);}
-            if (Input.GetKeyDown(KeyCode.Delete)) {TaskOnClickDelete();}
+            if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKey(KeyCode.Backspace)) {TaskOnClickDelete();}
 
         }
 
