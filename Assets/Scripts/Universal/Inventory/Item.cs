@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Items : IComparable<Items>
+public class Item : IComparable<Item>
 {
     public string _name;
     public string description;
     public int power;
     public GameObject picture;
 
-    public Items(string newName, string newDescription, int newPower, GameObject newPicture)
+    public Item(string newName, string newDescription, int newPower, GameObject newPicture)
     {
         _name = newName;
         description = newDescription;
@@ -19,7 +19,7 @@ public class Items : IComparable<Items>
     }
 
 
-    public int CompareTo(Items other)
+    public int CompareTo(Item other)
     {
         if (other == null)
         {
