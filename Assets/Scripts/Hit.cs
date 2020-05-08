@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    public GameObject Enemy;
+    public int dealt_damage = 25;
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D Enemy_Object)
     {
-        Destroy(Enemy);
-        Destroy(this, 5f);
+        Enemy en = Enemy_Object.GetComponent<Enemy>();
+        if (en != null)
+        {
+            en.Damage(dealt_damage);
+        }
+        Destroy(gameObject);
+        Debug.Log(Enemy_Object.name);
     }
-}
+}   
