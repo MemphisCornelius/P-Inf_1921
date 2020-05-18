@@ -131,3 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dealt_damage: 25
+  ProjectilePrefab: {fileID: 2835870712964040979}
