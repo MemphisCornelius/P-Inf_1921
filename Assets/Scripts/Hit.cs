@@ -8,18 +8,15 @@ public class Hit : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D Enemy_Object)
     {
         Health_and_Damage HaD = Enemy_Object.GetComponent<Health_and_Damage>();
-        if (HaD != null)
+        if (HaD != null && Enemy_Object.tag != gameObject.tag)
         {
             HaD.Damage(dealt_damage);
         }
-        /*
-        GameObject projectile = GetComponent<Shooting>().projectile;     
-        if (projectile != Enemy_Object)
+
+        if (Enemy_Object.tag != "Projectile")
         {
             Destroy(gameObject);
             Debug.Log(Enemy_Object.name);
-        }*/
-        Destroy(gameObject);
-        Debug.Log(Enemy_Object.name);
+        }
     }
 }   

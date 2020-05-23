@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 562861062056749729}
   m_Layer: 0
   m_Name: Enemy_Object
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,8 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy_health: 100
-  Player_health: 50
-  EnemyShot: 0
 --- !u!114 &3839817420918309960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +151,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2835870712964040979, guid: c8bc016ece17b5541a861b99709dca8f,
     type: 3}
   EnemyShot: 1
+  projectile: {fileID: 0}
+  ShotIntervall: 0.4
+  Fire_Point2: {fileID: 0}
   projectile_Force: 10
 --- !u!114 &562861062056749729
 MonoBehaviour:
