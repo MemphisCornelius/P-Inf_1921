@@ -8,11 +8,11 @@ public class Shooting : MonoBehaviour
     public GameObject projectilePrefab;
     public bool EnemyShot;
     public GameObject projectile;
-    public float ShotIntervall = 0.4f;
+    public float ShotCountdown = 0.4f;
     public Transform Fire_Point2;
     public bool multipleShoots;
-
     public float projectile_Force = 20f;
+    public float ShotReset = 0.4f;
 
     public void Shoot()
     {
@@ -30,6 +30,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
+
         if(Input.GetButtonDown("Fire1") && EnemyShot == false)
         {
             Shoot();
@@ -37,11 +38,11 @@ public class Shooting : MonoBehaviour
 
         if (EnemyShot == true)
         {
-            ShotIntervall = ShotIntervall - Time.deltaTime;
-            if (ShotIntervall <= 0)
+            ShotCountdown = ShotCountdown - Time.deltaTime;
+            if (ShotCountdown <= 0)
             {
                 Shoot();
-                ShotIntervall = 0.4f;
+                ShotCountdown = ShotReset;
             }
         }
     }
