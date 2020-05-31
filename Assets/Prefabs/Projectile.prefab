@@ -131,3 +131,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dealt_damage: 25
+  EnemyPrefab: {fileID: 562861062010079482, guid: f7fa8748437055a4290ce008deb07e0f,
+    type: 3}

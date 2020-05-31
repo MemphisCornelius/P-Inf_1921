@@ -8,6 +8,7 @@ public class Health_and_Damage : MonoBehaviour
     public GameObject EndGame_Panel;
     public GameObject Defeat_Text;
     public GameObject Victory_Text;
+    public GameObject ProjectilePrefab;
 
     public void Update()
     {

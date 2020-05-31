@@ -5,10 +5,13 @@ using UnityEngine;
 public class Hit : MonoBehaviour
 {
     public int dealt_damage = 25;
+    public GameObject EnemyPrefab;
+    public GameObject PlayerPrefab;
     public void OnTriggerEnter2D(Collider2D Enemy_Object)
     {
         Health_and_Damage HaD = Enemy_Object.GetComponent<Health_and_Damage>();
-        if (HaD != null && Enemy_Object.tag != gameObject.tag)
+
+        if (HaD != null && Enemy_Object.tag != EnemyPrefab.tag)
         {
             HaD.Damage(dealt_damage);
         }

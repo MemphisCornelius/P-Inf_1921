@@ -6,13 +6,23 @@ public class Enemy : MonoBehaviour
 {
     public Rigidbody2D Player;
     public Rigidbody2D rb;
+    public bool AutoRotate;
+    public float RotationSpeed = 100;
 
     public void Update()
     {
-        Vector2 Direction = Player.position - rb.position;
+        if (AutoRotate == true)
+        {
+            rb.rotation = rb. rotation + Time.deltaTime*RotationSpeed;
+        }
 
-        float angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg - 270f;
+        else
+        {
+            Vector2 Direction = Player.position - rb.position;
 
-        rb.rotation = angle;
+            float angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg - 270f;
+
+            rb.rotation = angle;
+        }
     }
 }

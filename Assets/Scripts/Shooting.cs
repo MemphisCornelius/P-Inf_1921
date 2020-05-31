@@ -10,6 +10,8 @@ public class Shooting : MonoBehaviour
     public GameObject projectile;
     public float ShotCountdown = 0.4f;
     public Transform Fire_Point2;
+    public Transform Fire_Point3;
+    public Transform Fire_Point4;
     public bool multipleShoots;
     public float projectile_Force = 20f;
     public float ShotReset = 0.4f;
@@ -25,6 +27,14 @@ public class Shooting : MonoBehaviour
             GameObject projectile2 = Instantiate(projectilePrefab, Fire_Point2.position, Fire_Point2.rotation);
             Rigidbody2D rd2 = projectile2.GetComponent<Rigidbody2D>();
             rd2.AddForce(Fire_Point2.up * projectile_Force, ForceMode2D.Impulse);
+
+            GameObject projectile3 = Instantiate(projectilePrefab, Fire_Point3.position, Fire_Point3.rotation);
+            Rigidbody2D rd3 = projectile3.GetComponent<Rigidbody2D>();
+            rd3.AddForce(Fire_Point3.up * projectile_Force, ForceMode2D.Impulse);
+
+            GameObject projectile4 = Instantiate(projectilePrefab, Fire_Point4.position, Fire_Point4.rotation);
+            Rigidbody2D rd4 = projectile4.GetComponent<Rigidbody2D>();
+            rd4.AddForce(Fire_Point4.up * projectile_Force, ForceMode2D.Impulse);
         }
     }
 

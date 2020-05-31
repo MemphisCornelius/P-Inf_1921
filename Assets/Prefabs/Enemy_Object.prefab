@@ -134,7 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81aaf6cc5e9f5a84b804ca33833fd297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_health: 100
+  Health: 100
+  EndGame_Panel: {fileID: 0}
+  Defeat_Text: {fileID: 0}
+  Victory_Text: {fileID: 0}
+  ProjectilePrefab: {fileID: 0}
 --- !u!114 &3839817420918309960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,9 +156,11 @@ MonoBehaviour:
     type: 3}
   EnemyShot: 1
   projectile: {fileID: 0}
-  ShotIntervall: 0.4
+  ShotCountdown: 0.4
   Fire_Point2: {fileID: 0}
+  multipleShoots: 0
   projectile_Force: 10
+  ShotReset: 0.4
 --- !u!114 &562861062056749729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 4289691793239390899, guid: 5bbc3f6632ca3ea4a89718502102f70f, type: 3}
   rb: {fileID: 562861062010079477}
+  AutoRotate: 0
+  RotationSpeed: 100
 --- !u!1 &562861062367596345
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562861062367596345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.5, z: 0.52}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.52}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 562861062010079478}
@@ -285,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6362513412743486128}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 562861062010079478}
