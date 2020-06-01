@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour
     public bool multipleShoots;
     public float projectile_Force = 20f;
     public float ShotReset = 0.4f;
+    public bool MoreMultipleShots;
 
     public void Shoot()
     {
@@ -28,13 +29,16 @@ public class Shooting : MonoBehaviour
             Rigidbody2D rd2 = projectile2.GetComponent<Rigidbody2D>();
             rd2.AddForce(Fire_Point2.up * projectile_Force, ForceMode2D.Impulse);
 
-            GameObject projectile3 = Instantiate(projectilePrefab, Fire_Point3.position, Fire_Point3.rotation);
-            Rigidbody2D rd3 = projectile3.GetComponent<Rigidbody2D>();
-            rd3.AddForce(Fire_Point3.up * projectile_Force, ForceMode2D.Impulse);
+            if (MoreMultipleShots == true)
+            {
+                GameObject projectile3 = Instantiate(projectilePrefab, Fire_Point3.position, Fire_Point3.rotation);
+                Rigidbody2D rd3 = projectile3.GetComponent<Rigidbody2D>();
+                rd3.AddForce(Fire_Point3.up * projectile_Force, ForceMode2D.Impulse);
 
-            GameObject projectile4 = Instantiate(projectilePrefab, Fire_Point4.position, Fire_Point4.rotation);
-            Rigidbody2D rd4 = projectile4.GetComponent<Rigidbody2D>();
-            rd4.AddForce(Fire_Point4.up * projectile_Force, ForceMode2D.Impulse);
+                GameObject projectile4 = Instantiate(projectilePrefab, Fire_Point4.position, Fire_Point4.rotation);
+                Rigidbody2D rd4 = projectile4.GetComponent<Rigidbody2D>();
+                rd4.AddForce(Fire_Point4.up * projectile_Force, ForceMode2D.Impulse);
+            }
         }
     }
 
