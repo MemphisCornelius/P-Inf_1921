@@ -10,6 +10,8 @@ public class Movement_Minigame : MonoBehaviour
     public float maxSpeed;
     private Vector3 target;
     public bool Movementenabled = true;
+    public GameObject Health_1;
+    public GameObject Health_2;
 
     public Camera camera;
 
@@ -51,6 +53,19 @@ public class Movement_Minigame : MonoBehaviour
             rb.rotation = angle;
 
         }
+
+        int Health = gameObject.GetComponent<Health_and_Damage>().Health;
+
+        if (Health <= 50)
+        {
+            Health_1.SetActive(false);
+
+            if (Health <= 25)
+            {
+                Health_2.SetActive(false);
+            }
+        }
+
     }
 
 
