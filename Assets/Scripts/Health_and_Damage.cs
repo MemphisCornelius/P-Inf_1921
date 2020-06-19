@@ -11,7 +11,7 @@ public class Health_and_Damage : MonoBehaviour
         Health = Health - damage;
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

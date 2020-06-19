@@ -16,7 +16,7 @@ public class Hit : MonoBehaviour
             HaD.Damage(dealt_damage);
         }
 
-        if (PlayerShot)
+        if (HaD != null && PlayerShot)
         {
             HaD.Damage(dealt_damage);
         }
