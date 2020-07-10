@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Robot_1.unity
     guid: 1f10c3d4b319d2b428668b1d5c3adc48
+  - enabled: 1
+    path: Assets/Scenes/Robot_2.unity
+    guid: b87d0d8dfea343a478ee3fa5768bb469
+  - enabled: 1
+    path: Assets/Scenes/Robot_3.unity
+    guid: 3895990c7e97ee34d927bf7e0c3aeda6
   m_configObjects: {}
