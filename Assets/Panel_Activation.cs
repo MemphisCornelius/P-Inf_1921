@@ -11,8 +11,8 @@ public class Panel_Activation : MonoBehaviour
     public GameObject[] RespawnedEnemies;
     public float SpawnTime = 2;
     public bool Respawned = false;
-    public int[] Scenes;
     public int SceneToReturnTo;
+    public static bool MinigameWon = false;
 
     public void Update()
     {
@@ -38,6 +38,7 @@ public class Panel_Activation : MonoBehaviour
             {
                 Victory_Text.SetActive(true);
                 SceneManager.LoadScene(SceneToReturnTo);
+                MinigameWon = true;
             }
             else
             {

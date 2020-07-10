@@ -64,7 +64,7 @@ public class Interactions_Level_3 : MonoBehaviour
     {
         if (StartRiddle)
         {
-            //SceneManager.LoadScene(3);
+            SceneManager.LoadScene(3);
             Panel.SetActive(true);
             Riddle_Text[0].SetActive(true);
         }
@@ -83,7 +83,7 @@ public class Interactions_Level_3 : MonoBehaviour
     {
         if (CrateDestroy)
         {
-            //SceneManager.LoadScene(4);
+            SceneManager.LoadScene(4);
             Panel.SetActive(true);
             Riddle_Text[1].SetActive(true);
         }
@@ -91,7 +91,7 @@ public class Interactions_Level_3 : MonoBehaviour
 
     public void Robot_3_Interact()
     {
-        //SceneManager.LoadScene(5);
+        SceneManager.LoadScene(5);
         Panel.SetActive(true);
         Riddle_Text[2].SetActive(true);
     }
