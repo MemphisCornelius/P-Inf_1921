@@ -1514,6 +1514,11 @@ PrefabInstance:
       propertyPath: RespawnedEnemies.Array.data[1]
       value: 
       objectReference: {fileID: 216672504}
+    - target: {fileID: 7380670607743067559, guid: e80d9dc30c5bba948ba744de735d731c,
+        type: 3}
+      propertyPath: MinigameNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2560213610908123517, guid: e80d9dc30c5bba948ba744de735d731c,
         type: 3}
       propertyPath: camera

@@ -25,6 +25,11 @@ public class Interactions_Level_3 : MonoBehaviour
     public bool CrateDestroy = false;
     public bool EndLevel = false;
 
+    public void Start()
+    {
+        Debug.Log(PlayerPrefs.GetInt("MinigameWon"));
+    }
+
     public void ClosePanel()
     {
         Panel.SetActive(false);
@@ -62,9 +67,12 @@ public class Interactions_Level_3 : MonoBehaviour
 
     public void Robot_1_Interact()
     {
-        if (StartRiddle)
+        if (StartRiddle && PlayerPrefs.GetInt("Minigame1Won") != 1)
         {
             SceneManager.LoadScene(3);
+        }
+        if (PlayerPrefs.GetInt("Minigame1Won") == 1)
+        {
             Panel.SetActive(true);
             Riddle_Text[0].SetActive(true);
         }
@@ -83,17 +91,29 @@ public class Interactions_Level_3 : MonoBehaviour
     {
         if (CrateDestroy)
         {
-            SceneManager.LoadScene(4);
-            Panel.SetActive(true);
-            Riddle_Text[1].SetActive(true);
+            if (PlayerPrefs.GetInt("Minigame2Won") != 2)
+            {
+                SceneManager.LoadScene(4);
+            }
+            if (PlayerPrefs.GetInt("Minigame2Won") == 2)
+            {
+                Panel.SetActive(true);
+                Riddle_Text[1].SetActive(true);
+            }
         }
     }
 
     public void Robot_3_Interact()
     {
-        SceneManager.LoadScene(5);
-        Panel.SetActive(true);
-        Riddle_Text[2].SetActive(true);
+        if (PlayerPrefs.GetInt("Minigame3Won") != 3)
+        {
+            SceneManager.LoadScene(5);
+        }
+        if (PlayerPrefs.GetInt("Minigame3Won") == 3)
+        {
+            Panel.SetActive(true);
+            Riddle_Text[2].SetActive(true);
+        }
     }
 
     public void PickupAxe()
@@ -149,5 +169,10 @@ public class Interactions_Level_3 : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+    }
+
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.SetInt("MinigameWon", 0);
     }
 }

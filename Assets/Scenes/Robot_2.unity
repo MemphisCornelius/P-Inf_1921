@@ -500,6 +500,7 @@ MonoBehaviour:
   SpawnTime: 2
   Respawned: 0
   SceneToReturnTo: 2
+  MinigameNumber: 2
 --- !u!4 &539899333
 Transform:
   m_ObjectHideFlags: 0

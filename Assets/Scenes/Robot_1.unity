@@ -307,16 +307,6 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4459482450835657122, guid: 86ebe924b8f15394791e20d83366f455,
-        type: 3}
-      propertyPath: ShotCountdown
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459482450835657122, guid: 86ebe924b8f15394791e20d83366f455,
-        type: 3}
-      propertyPath: ShotReset
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 1109338064559161163, guid: 86ebe924b8f15394791e20d83366f455,
         type: 3}
       propertyPath: Player
@@ -327,6 +317,16 @@ PrefabInstance:
         type: 3}
       propertyPath: AutoRotate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459482450835657122, guid: 86ebe924b8f15394791e20d83366f455,
+        type: 3}
+      propertyPath: ShotCountdown
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459482450835657122, guid: 86ebe924b8f15394791e20d83366f455,
+        type: 3}
+      propertyPath: ShotReset
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
@@ -1009,8 +1009,8 @@ MonoBehaviour:
   - {fileID: 1483672241}
   SpawnTime: 2
   Respawned: 0
-  Scenes: 
   SceneToReturnTo: 2
+  MinigameNumber: 1
 --- !u!4 &1391388704
 Transform:
   m_ObjectHideFlags: 0

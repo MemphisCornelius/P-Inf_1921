@@ -12,7 +12,7 @@ public class Panel_Activation : MonoBehaviour
     public float SpawnTime = 2;
     public bool Respawned = false;
     public int SceneToReturnTo;
-    public static bool MinigameWon = false;
+    public int MinigameNumber = 0;
 
     public void Update()
     {
@@ -38,7 +38,9 @@ public class Panel_Activation : MonoBehaviour
             {
                 Victory_Text.SetActive(true);
                 SceneManager.LoadScene(SceneToReturnTo);
-                MinigameWon = true;
+                PlayerPrefs.SetInt("Minigame" + MinigameNumber + "Won", MinigameNumber);
+                PlayerPrefs.Save();
+                Debug.Log(PlayerPrefs.GetInt("Minigame" + MinigameNumber + "Won"));
             }
             else
             {
