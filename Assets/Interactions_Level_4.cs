@@ -6,7 +6,10 @@ using UnityEngine.Events;
 public class Interactions_Level_4 : MonoBehaviour
 {
     public GameObject[] UI_Objects;
-
+    public Rigidbody2D Player;
+    public Rigidbody2D Sofa;
+    public GameObject sofa;
+    public bool SofaPickUp = false;
 
     public void ClosePanel()
     {
@@ -16,12 +19,20 @@ public class Interactions_Level_4 : MonoBehaviour
         }
     }
 
+    public void SofaButton()
+    {
+        ClosePanel();
+        sofa.SetActive(false);
+        SofaPickUp = true;
+    }
+
     [System.Serializable] public class _UnityEventFloat : UnityEvent<GameObject> { }
 
     public void SofaInteract()
     {
         UI_Objects[0].SetActive(true);
         UI_Objects[1].SetActive(true);
+        UI_Objects[6].SetActive(true);
     }
     
     public void BrokenFloorInteract()
@@ -48,4 +59,16 @@ public class Interactions_Level_4 : MonoBehaviour
         UI_Objects[5].SetActive(true);
     }
 
+    public void Update()
+    {
+        if (SofaPickUp && Input.GetKeyDown("e"))
+        {
+            sofa.SetActive(true);
+            Sofa.position = Player.position;
+            Vector3 placevector = Sofa.position;
+            placevector.y = placevector.y + 2;
+            Player.position = placevector;
+            SofaPickUp = false;
+        }
+    }
 }
