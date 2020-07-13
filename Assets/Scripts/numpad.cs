@@ -11,9 +11,13 @@ public class numpad : MonoBehaviour {
     public bool geil = false, codebool = false;
     public float keymessagetimer, maxdis;
     public GameObject numbpad, activator, player, information_panel;
-
+    public Inventory inv;
+    public GameObject keyP;
+    private Item key;
+    
     void Start() {
         Schlüsselnachricht.enabled = (false);
+        key = new Item("Schluessel", "Kann eine Tür öffnen", 1, keyP); 
     }
 
 
@@ -27,12 +31,32 @@ public class numpad : MonoBehaviour {
             numbpad.SetActive(false);
         }
 
+        if (numbpad.active)
+        {
+            if(Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Keypad0)) {TaskOnClick(0);}
+            if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) {TaskOnClick(1);}
+            if(Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2)) {TaskOnClick(2);}
+            if(Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3)) {TaskOnClick(3);}
+            if(Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4)) {TaskOnClick(4);}
+            if(Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Keypad5)) {TaskOnClick(5);}
+            if(Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown(KeyCode.Keypad6)) {TaskOnClick(6);}
+            if(Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Keypad7)) {TaskOnClick(7);}
+            if(Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.Keypad8)) {TaskOnClick(8);}
+            if(Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown(KeyCode.Keypad9)) {TaskOnClick(9);}
+            if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKey(KeyCode.Backspace)) {TaskOnClickDelete();}
+
+        }
+
         if (text.text == code.ToString()) {
             geil = true;
             codebool = true;
             numbpad.SetActive(false);
             Schlüsselnachricht.enabled = true;
             information_panel.SetActive(true);
+            if(!inv.ContainsItem(key)) {
+                inv.AddItem(key);
+            }
+            
         }
         else if (text.text.Length >= code.ToString().Length) {
             text.text = "";
@@ -48,44 +72,8 @@ public class numpad : MonoBehaviour {
         }
     }
 
-    public void TaskOnClick1() {
-        text.text += "1";
-    }
-
-    public void TaskOnClick2() {
-        text.text += "2";
-    }
-
-    public void TaskOnClick3() {
-        text.text += "3";
-    }
-
-    public void TaskOnClick4() {
-        text.text += "4";
-    }
-
-    public void TaskOnClick5() {
-        text.text += "5";
-    }
-
-    public void TaskOnClick6() {
-        text.text += "6";
-    }
-
-    public void TaskOnClick7() {
-        text.text += "7";
-    }
-
-    public void TaskOnClick8() {
-        text.text += "8";
-    }
-
-    public void TaskOnClick9() {
-        text.text += "9";
-    }
-
-    public void TaskOnClick0() {
-        text.text += "0";
+    public void TaskOnClick(int i) {
+        text.text += i;
     }
 
     public void TaskOnClickDelete() {
