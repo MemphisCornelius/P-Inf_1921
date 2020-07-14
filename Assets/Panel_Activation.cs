@@ -13,6 +13,7 @@ public class Panel_Activation : MonoBehaviour
     public bool Respawned = false;
     public int SceneToReturnTo;
     public int MinigameNumber = 0;
+    public bool BossMinigame = false;
 
     public void Update()
     {
@@ -44,6 +45,11 @@ public class Panel_Activation : MonoBehaviour
             }
             else
             {
+                if (BossMinigame)
+                {
+                    PlayerPrefs.SetInt("BossLost", PlayerPrefs.GetInt("BossLost") + 1);
+                    SceneManager.LoadScene(SceneToReturnTo);
+                }
                 Defeat_Text.SetActive(true);
             }
 
