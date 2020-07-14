@@ -61,12 +61,19 @@ public class Interactions_Level_4 : MonoBehaviour
 
     public void Update()
     {
-        if (SofaPickUp && Input.GetKeyDown("e"))
+        if (SofaPickUp && Input.GetKeyDown("e") && Player.position.x <= 5 && Player.position.x >= -5 && Player.position.y <= 2.5 && Player.position.y >= -3)
         {
             sofa.SetActive(true);
             Sofa.position = Player.position;
             Vector3 placevector = Sofa.position;
-            placevector.y = placevector.y + 2;
+            if (Player.position.y > 2)
+            {
+                placevector.y = placevector.y - 1;
+            }
+            else
+            {
+                placevector.y = placevector.y + 1;
+            }
             Player.position = placevector;
             SofaPickUp = false;
         }
