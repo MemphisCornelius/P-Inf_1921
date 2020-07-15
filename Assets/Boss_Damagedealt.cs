@@ -11,11 +11,14 @@ public class Boss_Damagedealt : MonoBehaviour
     public bool PointReached = false;
     public int DMG;
     public bool Playerstopped = false;
-    public int BossHealth = 100;
+    //public int BossHealth = 100;
     public Text BossHealthText;
     public float Countdown = 0.5f;
     public bool startboss = false;
     public GameObject[] DefeatImage;
+    public int BossCountdown = 80;
+    public int SceneCountdown = 9;
+    public bool ButtonPress = true;
 
     void FixedUpdate()
     {
@@ -33,15 +36,31 @@ public class Boss_Damagedealt : MonoBehaviour
                 Damage_Bar.MovePosition(Damage_Bar.position - movement);
             }
         }
-        BossHealthText.text = BossHealth.ToString();
+        BossHealthText.text = PlayerPrefs.GetInt("BossHealth").ToString();
         if (Playerstopped)
         {
             Countdown = Countdown - Time.deltaTime;
-            if (BossHealth >= 50 && Countdown <= 0)
+            if (PlayerPrefs.GetInt("BossHealth") >= 80 && Countdown <= 0)
             {
                 SceneManager.LoadScene(8);
             }
-            if (BossHealth <= 0)
+            if (PlayerPrefs.GetInt("BossHealth") >= 60 && PlayerPrefs.GetInt("BossHealth") < 80 && Countdown <= 0)
+            {
+                SceneManager.LoadScene(9);
+            }
+            if (PlayerPrefs.GetInt("BossHealth") >= 40 && PlayerPrefs.GetInt("BossHealth") < 60 && Countdown <= 0)
+            {
+                SceneManager.LoadScene(10);
+            }
+            if (PlayerPrefs.GetInt("BossHealth") >= 20 && PlayerPrefs.GetInt("BossHealth") < 40 && Countdown <= 0)
+            {
+                SceneManager.LoadScene(11);
+            }
+            if (PlayerPrefs.GetInt("BossHealth") > 0 && PlayerPrefs.GetInt("BossHealth") < 20 && Countdown <= 0)
+            {
+                SceneManager.LoadScene(12);
+            }
+            if (PlayerPrefs.GetInt("BossHealth") <= 0)
             {
                 Debug.Log("Won");
             }
@@ -78,8 +97,11 @@ public class Boss_Damagedealt : MonoBehaviour
 
     public void StopPlayer()
     {
-        Playerstopped = true;
-        BossHealth = BossHealth - DMG;
+        if (!Playerstopped)
+        {
+            Playerstopped = true;
+            PlayerPrefs.SetInt("BossHealth", PlayerPrefs.GetInt("BossHealth") - DMG);
+        }
     }
     public void StartBoss()
     {
@@ -89,5 +111,6 @@ public class Boss_Damagedealt : MonoBehaviour
     public void ResetPlayerPrefs()
     {
         PlayerPrefs.SetInt("BossLost", 0);
+        PlayerPrefs.SetInt("BossHealth", 100);
     }
 }
