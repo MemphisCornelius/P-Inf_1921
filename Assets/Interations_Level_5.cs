@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Interations_Level_5 : MonoBehaviour
 {
@@ -102,8 +104,29 @@ public class Interations_Level_5 : MonoBehaviour
         {
             Debug.Log("Riddle1End");
             Riddle1 = true;
+            ClosePanel();
         }
+    }
+    public void Riddle_2_Active()
+    {
+        if (Riddle1)
+        {
+            Panel.SetActive(true);
+            foreach (GameObject UI_Object2 in UI_Objects2)
+            {
+                UI_Object2.SetActive(true);
+            }
         }
+    }
+    public void EndRiddle_2()
+    {
+        if (PlayerPrefs.GetInt("Cable1") + PlayerPrefs.GetInt("Cable2") + PlayerPrefs.GetInt("Cable3") == 3)
+        {
+            Debug.Log("Riddle2End");
+            Riddle2 = true;
+            ClosePanel();
+        }
+    }
     public void ClosePanel()
     {
         foreach (GameObject UI_Object1 in UI_Objects1)
@@ -115,5 +138,9 @@ public class Interations_Level_5 : MonoBehaviour
             UI_Object2.SetActive(false);
         }
         Panel.SetActive(false);
+    }
+    public void ComputerInteract()
+    {
+        SceneManager.LoadScene(6);
     }
 }
