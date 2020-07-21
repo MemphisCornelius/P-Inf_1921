@@ -167,7 +167,7 @@ public class Interactions_Level_3 : MonoBehaviour
     {
         if (EndLevel)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(13);
         }
     }
 
