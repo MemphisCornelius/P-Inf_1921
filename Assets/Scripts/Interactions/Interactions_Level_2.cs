@@ -17,7 +17,9 @@ public class Interactions_Level_2 : MonoBehaviour
     public GameObject Stairway_Key_Image;
     public bool Stairway_Key_Active = false;
     public GameObject Oliveoil_Text;
+    public GameObject Oliveoil_Button;
     public GameObject Trap_Door_Text;
+    public GameObject OliveOil;
 
     public void ClosePanel()
     {
@@ -28,6 +30,7 @@ public class Interactions_Level_2 : MonoBehaviour
         Kitchen_Note_Text.SetActive(false);
         Oliveoil_Text.SetActive(false);
         Trap_Door_Text.SetActive(false);
+        Oliveoil_Button.SetActive(false);
     }
     [System.Serializable] public class _UnityEventFloat : UnityEvent<GameObject> { }
 
@@ -76,6 +79,13 @@ public class Interactions_Level_2 : MonoBehaviour
     {
         Panel.SetActive(true);
         Oliveoil_Text.SetActive(true);
+        Oliveoil_Button.SetActive(true);
+    }
+
+    public void OliveoilButton() {
+        PlayerPrefs.SetInt("oliveoil", 1);
+        OliveOil.SetActive(false);
+        ClosePanel();
     }
 
     public void Trap_Door_Interact()

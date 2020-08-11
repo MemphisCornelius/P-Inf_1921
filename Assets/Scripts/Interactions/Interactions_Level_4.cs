@@ -10,6 +10,7 @@ public class Interactions_Level_4 : MonoBehaviour
     public Rigidbody2D Sofa;
     public GameObject sofa;
     public bool SofaPickUp = false;
+    public bool  
 
     public void ClosePanel()
     {
@@ -30,9 +31,12 @@ public class Interactions_Level_4 : MonoBehaviour
 
     public void SofaInteract()
     {
-        UI_Objects[0].SetActive(true);
-        UI_Objects[1].SetActive(true);
-        UI_Objects[6].SetActive(true);
+        if (!(Player.position.y <= 0.6 && Player.position.y >= -0.6 && Player.position.x <= 2.6 && Player.position.x >= -0.6))
+        {
+            UI_Objects[0].SetActive(true);
+            UI_Objects[1].SetActive(true);
+            UI_Objects[6].SetActive(true);
+        }
     }
     
     public void BrokenFloorInteract()
@@ -49,8 +53,21 @@ public class Interactions_Level_4 : MonoBehaviour
 
     public void WinchInteract()
     {
-        UI_Objects[0].SetActive(true);
-        UI_Objects[4].SetActive(true);
+        if (!SofaPickUp)
+        {
+            UI_Objects[0].SetActive(true);
+            UI_Objects[4].SetActive(true);
+
+            if ((Player.position.y <= 0.6 && Player.position.y >= -0.6 && Player.position.x <= 2.6 &&
+                  Player.position.x >= -0.6) && PlayerPrefs.GetInt("oliveoil") == 1)
+            {
+                UI_Objects[7].SetActive(true);
+            }
+        }
+    }
+
+    public void UseOliveOil() {
+        
     }
 
     public void BoxInteract()
