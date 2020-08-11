@@ -10,7 +10,7 @@ public class Interactions_Level_4 : MonoBehaviour
     public Rigidbody2D Sofa;
     public GameObject sofa;
     public bool SofaPickUp = false;
-    public bool  
+    public bool OilUSed = false;
 
     public void ClosePanel()
     {
@@ -53,7 +53,7 @@ public class Interactions_Level_4 : MonoBehaviour
 
     public void WinchInteract()
     {
-        if (!SofaPickUp)
+        if (!SofaPickUp && !OilUSed)
         {
             UI_Objects[0].SetActive(true);
             UI_Objects[4].SetActive(true);
@@ -67,7 +67,9 @@ public class Interactions_Level_4 : MonoBehaviour
     }
 
     public void UseOliveOil() {
-        
+        PlayerPrefs.SetInt("oliveoil", 0);
+        OilUSed = true;
+        ClosePanel();
     }
 
     public void BoxInteract()
