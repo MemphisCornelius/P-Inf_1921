@@ -23,7 +23,7 @@ public class Hit : MonoBehaviour
 
         if (Enemy_Object.tag != "Projectile")
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //animation explosion
             Debug.Log(Enemy_Object.name);
         }
     }
