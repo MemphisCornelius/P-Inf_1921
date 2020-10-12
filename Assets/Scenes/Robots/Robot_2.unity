@@ -501,6 +501,8 @@ MonoBehaviour:
   Respawned: 0
   SceneToReturnTo: 2
   MinigameNumber: 2
+  BossMinigame: 0
+  CorrectEnemy: {fileID: 1527536170}
 --- !u!4 &539899333
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,6 +1675,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58b68e218f53991488348b073ec7db5b, type: 3}
+--- !u!1 &1527536170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109338064646708496, guid: 86ebe924b8f15394791e20d83366f455,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446893337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1528060753
 GameObject:
   m_ObjectHideFlags: 0

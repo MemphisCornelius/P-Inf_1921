@@ -14,6 +14,7 @@ public class Panel_Activation : MonoBehaviour
     public int SceneToReturnTo;
     public int MinigameNumber = 0;
     public bool BossMinigame = false;
+    public GameObject CorrectEnemy;
 
     public void Update()
     {
@@ -32,10 +33,11 @@ public class Panel_Activation : MonoBehaviour
                 }
             }
         }
-        if (Enemycount <= 0 || Playercount <= 0)
+
+        if (Enemycount <= 0 || Playercount <= 0 || !CorrectEnemy.activeSelf)
         {
             EndGame_Panel.SetActive(true);
-            if (Enemycount <= 0)
+            if (Enemycount <= 0 || !CorrectEnemy.activeSelf)
             {
                 Victory_Text.SetActive(true);
                 SceneManager.LoadScene(SceneToReturnTo);

@@ -24,7 +24,7 @@ public class Hit : MonoBehaviour
 
         if (Enemy_Object.tag != "Projectile")
         {
-            EnemyPrefab.GetComponent<Animator>().SetBool("Explosion", true);
+            //EnemyPrefab.GetComponent<Animator>().SetBool("Explosion", true);
             Destroy(gameObject); 
             //animation explosion
             Debug.Log(Enemy_Object.name);
