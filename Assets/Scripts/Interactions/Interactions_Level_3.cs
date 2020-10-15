@@ -173,6 +173,9 @@ public class Interactions_Level_3 : MonoBehaviour
 
     public void ResetPlayerPrefs()
     {
-        PlayerPrefs.SetInt("MinigameWon", 0);
+        for(int i = 1; i <= 3; i++)
+        {
+            PlayerPrefs.SetInt("Minigame" + i + "Won", 0);
+        }
     }
 }

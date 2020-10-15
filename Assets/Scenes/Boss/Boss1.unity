@@ -202,6 +202,11 @@ PrefabInstance:
       propertyPath: BossMinigame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7380670607743067559, guid: e80d9dc30c5bba948ba744de735d731c,
+        type: 3}
+      propertyPath: CorrectEnemy
+      value: 
+      objectReference: {fileID: 909587055}
     - target: {fileID: 2560213610908123517, guid: e80d9dc30c5bba948ba744de735d731c,
         type: 3}
       propertyPath: camera
@@ -836,6 +841,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &909587055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109338064646708496, guid: 86ebe924b8f15394791e20d83366f455,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117406749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1025120851
 GameObject:
   m_ObjectHideFlags: 0

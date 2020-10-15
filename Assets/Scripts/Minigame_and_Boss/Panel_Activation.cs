@@ -14,7 +14,7 @@ public class Panel_Activation : MonoBehaviour
     public int SceneToReturnTo;
     public int MinigameNumber = 0;
     public bool BossMinigame = false;
-    public GameObject CorrectEnemy;
+    public GameObject CorrectEnemy = null;
     public GameObject VocabText;
 
     public void Update()
@@ -49,12 +49,12 @@ public class Panel_Activation : MonoBehaviour
             }
             else
             {
+                Defeat_Text.SetActive(true);
                 if (BossMinigame)
                 {
                     PlayerPrefs.SetInt("BossLost", PlayerPrefs.GetInt("BossLost") + 1);
                     SceneManager.LoadScene(SceneToReturnTo);
                 }
-                Defeat_Text.SetActive(true);
             }
 
         }
