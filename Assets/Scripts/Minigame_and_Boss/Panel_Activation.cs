@@ -15,6 +15,7 @@ public class Panel_Activation : MonoBehaviour
     public int MinigameNumber = 0;
     public bool BossMinigame = false;
     public GameObject CorrectEnemy;
+    public GameObject VocabText;
 
     public void Update()
     {
@@ -36,6 +37,7 @@ public class Panel_Activation : MonoBehaviour
 
         if (Enemycount <= 0 || Playercount <= 0 || !CorrectEnemy.activeSelf)
         {
+            VocabText.SetActive(false);
             EndGame_Panel.SetActive(true);
             if (Enemycount <= 0 || !CorrectEnemy.activeSelf)
             {
