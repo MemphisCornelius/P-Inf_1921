@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &88423575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109338064646708496, guid: 86ebe924b8f15394791e20d83366f455,
+    type: 3}
+  m_PrefabInstance: {fileID: 842669664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &323340021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5256744625446615184, guid: f7fa8748437055a4290ce008deb07e0f,
@@ -1147,6 +1153,11 @@ PrefabInstance:
       propertyPath: SceneToReturnTo
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7380670607743067559, guid: e80d9dc30c5bba948ba744de735d731c,
+        type: 3}
+      propertyPath: CorrectEnemy
+      value: 
+      objectReference: {fileID: 88423575}
     - target: {fileID: 2560213610908123517, guid: e80d9dc30c5bba948ba744de735d731c,
         type: 3}
       propertyPath: camera
