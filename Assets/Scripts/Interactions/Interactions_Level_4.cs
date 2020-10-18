@@ -12,6 +12,34 @@ public class Interactions_Level_4 : MonoBehaviour
     public bool SofaPickUp = false;
     public bool OilUSed = false;
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            foreach (GameObject UI_Object in UI_Objects)
+            {
+                UI_Object.SetActive(false);
+            }
+        }
+
+        if (SofaPickUp && Input.GetKeyDown("e") && Player.position.x <= 5 && Player.position.x >= -5 && Player.position.y <= 2.5 && Player.position.y >= -3)
+        {
+            sofa.SetActive(true);
+            Sofa.position = Player.position;
+            Vector3 placevector = Sofa.position;
+            if (Player.position.y > 2)
+            {
+                placevector.y = placevector.y - 1;
+            }
+            else
+            {
+                placevector.y = placevector.y + 1;
+            }
+            Player.position = placevector;
+            SofaPickUp = false;
+        }
+    }
+
     public void ClosePanel()
     {
         foreach (GameObject UI_Object in UI_Objects)
@@ -76,25 +104,5 @@ public class Interactions_Level_4 : MonoBehaviour
     {
         UI_Objects[0].SetActive(true);
         UI_Objects[5].SetActive(true);
-    }
-
-    public void Update()
-    {
-        if (SofaPickUp && Input.GetKeyDown("e") && Player.position.x <= 5 && Player.position.x >= -5 && Player.position.y <= 2.5 && Player.position.y >= -3)
-        {
-            sofa.SetActive(true);
-            Sofa.position = Player.position;
-            Vector3 placevector = Sofa.position;
-            if (Player.position.y > 2)
-            {
-                placevector.y = placevector.y - 1;
-            }
-            else
-            {
-                placevector.y = placevector.y + 1;
-            }
-            Player.position = placevector;
-            SofaPickUp = false;
-        }
     }
 }

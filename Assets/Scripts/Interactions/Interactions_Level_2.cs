@@ -21,6 +21,21 @@ public class Interactions_Level_2 : MonoBehaviour
     public GameObject Trap_Door_Text;
     public GameObject OliveOil;
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Panel.SetActive(false);
+            Text_Bookshelf.SetActive(false);
+            Kitchen_Key_Image.SetActive(false);
+            Stairway_Key_Image.SetActive(false);
+            Kitchen_Note_Text.SetActive(false);
+            Oliveoil_Text.SetActive(false);
+            Trap_Door_Text.SetActive(false);
+            Oliveoil_Button.SetActive(false);
+        }
+    }
+
     public void ClosePanel()
     {
         Panel.SetActive(false);

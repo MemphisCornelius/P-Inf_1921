@@ -22,6 +22,35 @@ public class Interations_Level_5 : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            foreach (GameObject UI_Object1 in UI_Objects1)
+            {
+                UI_Object1.SetActive(false);
+            }
+            foreach (GameObject UI_Object2 in UI_Objects2)
+            {
+                UI_Object2.SetActive(false);
+            }
+            Panel.SetActive(false);
+        }
+    }
+
+    public void ClosePanel()
+    {
+        foreach (GameObject UI_Object1 in UI_Objects1)
+        {
+            UI_Object1.SetActive(false);
+        }
+        foreach (GameObject UI_Object2 in UI_Objects2)
+        {
+            UI_Object2.SetActive(false);
+        }
+        Panel.SetActive(false);
+    }
+
     public void DoorInteract()
     {
         if (Riddle2)
@@ -127,18 +156,7 @@ public class Interations_Level_5 : MonoBehaviour
             ClosePanel();
         }
     }
-    public void ClosePanel()
-    {
-        foreach (GameObject UI_Object1 in UI_Objects1)
-        {
-            UI_Object1.SetActive(false);
-        }
-        foreach (GameObject UI_Object2 in UI_Objects2)
-        {
-            UI_Object2.SetActive(false);
-        }
-        Panel.SetActive(false);
-    }
+
     public void ComputerInteract()
     {
         SceneManager.LoadScene(6);

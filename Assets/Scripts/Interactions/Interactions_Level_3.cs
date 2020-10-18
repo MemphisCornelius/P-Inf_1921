@@ -30,6 +30,24 @@ public class Interactions_Level_3 : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("MinigameWon"));
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Panel.SetActive(false);
+            Information_Image.SetActive(false);
+            Robot_3_Text.SetActive(false);
+            AxeImage.SetActive(false);
+            Riddle_Text[0].SetActive(false);
+            Riddle_Text[1].SetActive(false);
+            Riddle_Text[2].SetActive(false);
+            BrickWallImage.SetActive(false);
+            CloseButton.SetActive(false);
+            BrokenFloorText.SetActive(false);
+            EndRiddle.SetActive(false);
+        }
+    }
+
     public void ClosePanel()
     {
         Panel.SetActive(false);
