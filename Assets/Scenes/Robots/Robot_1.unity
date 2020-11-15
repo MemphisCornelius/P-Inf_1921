@@ -223,8 +223,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1109338064646708509, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
-    - {fileID: 1109338064646708510, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
 --- !u!4 &169311338 stripped
 Transform:
@@ -239,16 +239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1362436126}
     m_Modifications:
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: enemyObject
-      value: 
-      objectReference: {fileID: 677055225}
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: respawnEnemy
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_Name
@@ -257,6 +247,16 @@ PrefabInstance:
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 677055225}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: respawnEnemy
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3643823380044940293, guid: adb822da644a2184eb9b3696b72dae04,
@@ -390,16 +390,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1362436126}
     m_Modifications:
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: enemyObject
-      value: 
-      objectReference: {fileID: 1068504024}
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_Name
       value: Solution
       objectReference: {fileID: 0}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 1068504024}
     - target: {fileID: 3643823380044940293, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -606,8 +606,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1109338064646708510, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
-    - {fileID: 1109338064646708509, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
 --- !u!4 &373974767 stripped
 Transform:
@@ -671,6 +671,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &374022454
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374022447}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66106b69c0d2c3047abfd3f79d68666b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &402991204
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,8 +889,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 272825412}
     m_RemovedComponents:
-    - {fileID: 1109338064646708509, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
-    - {fileID: 1109338064646708510, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
 --- !u!4 &596413519 stripped
 Transform:
@@ -942,16 +961,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1362436126}
     m_Modifications:
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: enemyObject
-      value: 
-      objectReference: {fileID: 2106470966}
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_Name
       value: Solution (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 2106470966}
     - target: {fileID: 3643823380044940293, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1230,16 +1249,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1362436126}
     m_Modifications:
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: enemyObject
-      value: 
-      objectReference: {fileID: 374022447}
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_Name
       value: Solution (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 374022447}
     - target: {fileID: 3643823380044940293, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1566,8 +1585,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 272825412}
     m_RemovedComponents:
-    - {fileID: 1109338064646708509, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
-    - {fileID: 1109338064646708510, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
 --- !u!4 &1102087372 stripped
 Transform:
@@ -1918,16 +1937,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1362436126}
     m_Modifications:
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: enemyObject
-      value: 
-      objectReference: {fileID: 1483672241}
-    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
-        type: 3}
-      propertyPath: respawnEnemy
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_Name
@@ -1936,6 +1945,16 @@ PrefabInstance:
     - target: {fileID: 3643823380044940294, guid: adb822da644a2184eb9b3696b72dae04,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 1483672241}
+    - target: {fileID: 2508266814751606074, guid: adb822da644a2184eb9b3696b72dae04,
+        type: 3}
+      propertyPath: respawnEnemy
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3643823380044940293, guid: adb822da644a2184eb9b3696b72dae04,
@@ -2189,8 +2208,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 272825412}
     m_RemovedComponents:
-    - {fileID: 1109338064646708509, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
-    - {fileID: 1109338064646708510, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 86ebe924b8f15394791e20d83366f455, type: 3}
 --- !u!4 &1403266250 stripped
 Transform:
