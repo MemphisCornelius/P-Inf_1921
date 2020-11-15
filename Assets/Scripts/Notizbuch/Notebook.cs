@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Notizbuch {
+/**namespace Notizbuch {
     public class Notebook : MonoBehaviour {
     
         [SerializeField] private string[] pages;
@@ -90,4 +90,4 @@ namespace Notizbuch {
             }
         }
     }
-}
+}*/
