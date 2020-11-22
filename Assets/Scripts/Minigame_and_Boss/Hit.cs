@@ -11,6 +11,7 @@ public class Hit : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D Enemy_Object)
     {
         Health_and_Damage HaD = Enemy_Object.GetComponent<Health_and_Damage>();
+        
 
         if (HaD != null && Enemy_Object.tag != EnemyPrefab.tag)
         {
@@ -27,8 +28,8 @@ public class Hit : MonoBehaviour
         if (Enemy_Object.tag != "Projectile")
         {
             
-            Destroy(gameObject); 
-            //animation explosion
+            Destroy(gameObject);
+            
             Debug.Log(Enemy_Object.name);
         }
     }
