@@ -71,6 +71,7 @@ public class Interactions_Level_3 : MonoBehaviour
             BrickWall.SetActive(false);
             BrickWallImage.SetActive(false);
             CloseButton.SetActive(false);
+            NoteInteract();
         }
     }
 

@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class Interations_Level_5 : MonoBehaviour
+public class 
+    Interations_Level_5 : MonoBehaviour
 {
     public GameObject Door;
     public GameObject Panel;
@@ -70,7 +71,7 @@ public class Interations_Level_5 : MonoBehaviour
     {
         UI_Objects1[0].transform.Rotate(0, 0, 90);
         Debug.Log(UI_Objects1[0].transform.rotation.eulerAngles.z);
-        if (Mathf.Round(UI_Objects1[0].transform.rotation.eulerAngles.z) == 180)
+        if (Mathf.Round(UI_Objects1[0].transform.rotation.eulerAngles.z) == 270)
         {
             ButtonCount[0] = true;
         }
@@ -94,7 +95,7 @@ public class Interations_Level_5 : MonoBehaviour
     public void Riddle_1_3()
     {
         UI_Objects1[2].transform.Rotate(0, 0, 90);
-        if (Mathf.Round(UI_Objects1[2].transform.rotation.eulerAngles.z) == 90 || Mathf.Round(UI_Objects1[2].transform.rotation.eulerAngles.z) == 270)
+        if (Mathf.Round(UI_Objects1[2].transform.rotation.eulerAngles.z) == 0 || Mathf.Round(UI_Objects1[2].transform.rotation.eulerAngles.z) == 180)
         {
             ButtonCount[2] = true;
         }
@@ -106,7 +107,7 @@ public class Interations_Level_5 : MonoBehaviour
     public void Riddle_1_4()
     {
         UI_Objects1[3].transform.Rotate(0, 0, 90);
-        if (Mathf.Round(UI_Objects1[3].transform.rotation.eulerAngles.z) == 270)
+        if (Mathf.Round(UI_Objects1[3].transform.rotation.eulerAngles.z) == 180)
         {
             ButtonCount[3] = true;
         }
@@ -118,7 +119,7 @@ public class Interations_Level_5 : MonoBehaviour
     public void Riddle_1_5()
     {
         UI_Objects1[4].transform.Rotate(0, 0, 90);
-        if (Mathf.Round(UI_Objects1[4].transform.rotation.eulerAngles.z) == 180)
+        if (Mathf.Round(UI_Objects1[4].transform.rotation.eulerAngles.z) == 270)
         {
             ButtonCount[4] = true;
         }
